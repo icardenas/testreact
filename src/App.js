@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import firebase from 'firebase'
-import ReactGA from 'react-ga'
+import firebase from 'firebase';
+import ReactGA from 'react-ga';
 
 
 ReactGA.initialize('UA-97463187-1');
