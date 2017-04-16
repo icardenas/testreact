@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import firebase from 'firebase'
+import ReactGA from 'react-ga'
+
+
+ReactGA.initialize('UA-97463187-1');
 
 const config = {
     apiKey: 'AIzaSyDChYefuJXfsRwm1dj1VaLdOMr2SDIKaPI',
