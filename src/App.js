@@ -34,7 +34,7 @@ class App extends Component {
         })
     })
 
-    const fire2 = firebase.database().ref().child('object').child('name');
+    const fire2 = firebase.database().ref().child('object2').child('name');
     fire2.on('value',(snapshot)=>{
         this.setState({
           name2: snapshot.val()
