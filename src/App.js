@@ -23,7 +23,7 @@ class App extends Component {
  constructor(args){
    
    super(args);
-   this.state={name:'pepe'}
+   this.state={name:'pepe', name2:''}
  }
 
  componentWillMount(){
@@ -31,6 +31,13 @@ class App extends Component {
     fire.on('value',(snapshot)=>{
         this.setState({
           name: snapshot.val()
+        })
+    })
+
+    const fire2 = firebase.database().ref().child('object').child('name');
+    fire2.on('value',(snapshot)=>{
+        this.setState({
+          name2: snapshot.val()
         })
     })
  }
@@ -47,6 +54,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         {this.state.name}
+        {this.state.name2}
       </div>
     );
   }
